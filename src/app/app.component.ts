@@ -2,10 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { initFlowbite } from 'flowbite';
 import { LoginComponent } from "./pages/login/login.component";
+import { AdminDashbordComponent } from "./pages/admin-dashbord/admin-dashbord.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet, LoginComponent],
+  imports: [RouterOutlet, LoginComponent, AdminDashbordComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

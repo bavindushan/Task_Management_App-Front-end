@@ -1,1 +1,103 @@
-<p>admin-dashbord works!</p>
+<div class="flex min-h-screen bg-gray-100">
+
+  <!-- Sidebar -->
+  <app-admin-navbar></app-admin-navbar>
+
+  <!-- Main Content -->
+  <main class="flex-1 p-6 space-y-6">
+    <h1 class="text-2xl font-bold text-gray-800">Dashboard</h1>
+
+    <!-- Update Section -->
+    <section class="bg-[#EDEBFE] p-6 rounded-lg shadow flex items-center justify-between">
+      <div>
+        <h2 class="text-xl font-semibold mb-2">Weekly Exams!</h2>
+        <section class="p-6 bg-white rounded-lg shadow">
+          <div class="flex justify-between items-center mb-4">
+            <h2 class="text-2xl font-bold text-gray-800">Exam Schedule</h2>
+          </div>
+
+          <!-- Exam Table -->
+          <div class="overflow-x-auto">
+            <table class="w-full text-sm text-left text-gray-600">
+              <thead class="text-xs text-gray-700 uppercase bg-[#AC94FA]">
+                <tr>
+                  <th class="px-4 py-3">Exam Title</th>
+                  <th class="px-4 py-3">Subject</th>
+                  <th class="px-4 py-3">Date</th>
+                  <th class="px-4 py-3">Time</th>
+                  <th class="px-4 py-3">Duration</th>
+                  <th class="px-4 py-3">Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="bg-white border-b">
+                  <td class="px-4 py-3 font-medium text-gray-900">Mid Term Exam</td>
+                  <td class="px-4 py-3">Mathematics</td>
+                  <td class="px-4 py-3">2025-04-15</td>
+                  <td class="px-4 py-3">10:00 AM</td>
+                  <td class="px-4 py-3">2 Hours</td>
+                  <td class="px-4 py-3">
+                    <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded">Scheduled</span>
+                  </td>
+                </tr>
+                <!-- Repeat rows -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </section>
+
+    <!-- Activity Summary -->
+    <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-[#EDEBFE] p-4 rounded-lg shadow text-center">
+        <p>Presence</p>
+        <strong class="text-xl">120</strong>
+      </div>
+      <div class="bg-[#EDEBFE] p-4 rounded-lg shadow text-center">
+        <p>Quizzes</p>
+        <strong class="text-xl">20</strong>
+      </div>
+      <div class="bg-[#EDEBFE] p-4 rounded-lg shadow text-center">
+        <p>Exam</p>
+        <strong class="text-xl">10</strong>
+      </div>
+      <div class="bg-[#EDEBFE] p-4 rounded-lg shadow text-center">
+        <p>Finish This Week</p>
+        <strong class="text-xl">5</strong>
+      </div>
+    </section>
+
+    <!-- Teacher's Class Summary -->
+    <section class="bg-[#EDEBFE] p-6 rounded-lg shadow">
+      <h2 class="text-xl font-semibold mb-4">My Classes</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm text-left text-gray-500">
+          <thead class="text-xs text-gray-700 uppercase bg-[#AC94FA]">
+            <tr>
+              <th class="px-4 py-2">Class</th>
+              <th class="px-4 py-2">Subject</th>
+              <th class="px-4 py-2">Students</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="bg-white border-b">
+              <td class="px-4 py-2">10A</td>
+              <td class="px-4 py-2">Mathematics</td>
+              <td class="px-4 py-2">35</td>
+            </tr>
+            <tr class="bg-white border-b">
+              <td class="px-4 py-2">10B</td>
+              <td class="px-4 py-2">Science</td>
+              <td class="px-4 py-2">30</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <!-- Right Panel -->
+  <!-- <app-left-details-bar></app-left-details-bar> -->
+
+</div>

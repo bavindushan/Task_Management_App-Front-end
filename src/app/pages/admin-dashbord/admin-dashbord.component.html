@@ -1,10 +1,12 @@
 <div class="flex min-h-screen bg-gray-100">
 
-  <!-- Sidebar -->
-  <app-admin-navbar></app-admin-navbar>
+  <!-- Sidebar - Fixed Left -->
+  <div class="fixed left-0 top-0 h-screen z-10">
+    <app-admin-navbar></app-admin-navbar>
+  </div>
 
   <!-- Main Content -->
-  <div class="flex min-h-screen bg-gray-100">
+  <div class="flex flex-1 min-h-screen bg-gray-100 ml-[220px] mr-[295px] overflow-y-auto">
 
     <main class="flex-1 p-6 space-y-6">
       <h1 class="text-2xl font-bold text-gray-800">Admin Dashboard</h1>
@@ -12,21 +14,21 @@
 
       <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
         <div class="bg-white p-4 rounded-lg shadow text-center" style="background-color: #e2ebfe;">
-          <p>Total Students</p>
+          <p>Total Workers</p>
           <strong class="text-xl">350</strong>
         </div>
 
         <div class="bg-white p-4 rounded-lg shadow text-center" style="background-color: #e2ebfe;">
-          <p>Total Teachers</p>
+          <p>Total Tasks</p>
           <strong class="text-xl">40</strong>
         </div>
 
         <div class="bg-white p-4 rounded-lg shadow text-center" style="background-color: #e2ebfe;">
-          <p>Total Exams</p>
+          <p>Ongoing Tasks</p>
           <strong class="text-xl">40</strong>
         </div>
         <div class="bg-white p-4 rounded-lg shadow text-center" style="background-color: #e2ebfe;">
-          <p>Pending Exams</p>
+          <p>Completed Tasks</p>
           <strong class="text-xl">15</strong>
         </div>
 
@@ -34,12 +36,12 @@
 
 
       <section class="bg-white p-6 rounded-lg shadow" style="background-color: #e2ebfe;">
-        <h2 class="text-xl font-semibold mb-4">User Management</h2>
+        <h2 class="text-xl font-semibold mb-4">Quick Task Management</h2>
         <div class="overflow-x-auto">
           <table class="w-full text-sm text-left text-gray-500">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50">
               <tr style="background-color: #88b3ff;">
-                <th class="px-4 py-2">User ID</th>
+                <th class="px-4 py-2">Task ID</th>
                 <th class="px-4 py-2">Name</th>
                 <th class="px-4 py-2">Email</th>
                 <th class="px-4 py-2">Role</th>
@@ -51,16 +53,46 @@
               <tr class="bg-white border-b">
                 <td class="px-4 py-2">101</td>
                 <td class="px-4 py-2">John Smith</td>
-                <td class="px-4 py-2">john.smithexample.com</td>
-                <td class="px-4 py-2">Admin</td>
+                <td class="px-4 py-2">john&#64;gmail.com</td>
+                <td class="px-4 py-2">Developer</td>
                 <td class="px-4 py-2">
-                  <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded">Active</span>
+                  <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded">Ongoing</span>
                 </td>
                 <td class=" py-1">
                   <button type="button"
-                    class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-3 py-1.5 text-center me-2 mb-2 ">Edit</button>
+                    class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-xs px-3 py-1.5 text-center me-2 mb-2 ">Edit</button>
                   <button type="button"
-                    class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-3 py-1.5 text-center me-2 mb-2">Delete</button>
+                    class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-xs px-3 py-1.5 text-center me-2 mb-1">Delete</button>
+                </td>
+              </tr>
+              <tr class="bg-white border-b">
+                <td class="px-4 py-2">101</td>
+                <td class="px-4 py-2">John Smith</td>
+                <td class="px-4 py-2">john&#64;gmail.com</td>
+                <td class="px-4 py-2">Developer</td>
+                <td class="px-4 py-2">
+                  <span class="bg-yellow-100 text-yellow-600 text-xs font-medium px-2 py-1 rounded">Completed</span>
+                </td>
+                <td class=" py-1">
+                  <button type="button"
+                    class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-xs px-3 py-1.5 text-center me-2 mb-2 ">Edit</button>
+                  <button type="button"
+                    class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-xs px-3 py-1.5 text-center me-2 mb-1">Delete</button>
+                </td>
+              </tr>
+              <tr class="bg-white border-b">
+                <td class="px-4 py-2">101</td>
+                <td class="px-4 py-2">John Smith</td>
+                <td class="px-4 py-2">john&#64;gmail.com</td>
+                <td class="px-4 py-2">Developer</td>
+                <td class="px-4 py-2">
+                  <span class="bg-red-100 text-red-600 text-xs font-medium px-2 py-1 rounded">Not Yet</span>
+                </td>
+                <td class=" py-1">
+                  <button type="button"
+                    class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-xs px-3 py-1.5 text-center me-2 mb-2 ">Edit</button>
+                  <button type="button"
+                    class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-xs px-3 py-1.5 text-center me-2 mb-1">Delete</button>
                 </td>
               </tr>
             </tbody>
@@ -80,16 +112,13 @@
             <p class="text-gray-700">User 103 requested a role change</p>
             <span class="text-gray-500 text-sm">2025-04-05 11:20 AM</span>
           </div>
-
         </div>
       </section>
-
     </main>
-
-
   </div>
 
-  <!-- Right Panel -->
-  <app-details-bar></app-details-bar>
+  <div class="fixed right-0 top-0 h-screen z-10">
+    <app-details-bar></app-details-bar>
+  </div>
 
 </div>

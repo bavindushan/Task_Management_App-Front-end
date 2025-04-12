@@ -4,100 +4,92 @@
   <app-admin-navbar></app-admin-navbar>
 
   <!-- Main Content -->
-  <main class="flex-1 p-6 space-y-6">
-    <h1 class="text-2xl font-bold text-gray-800">Dashboard</h1>
+  <div class="flex min-h-screen bg-gray-100">
 
-    <!-- Update Section -->
-    <section class="bg-[#EDEBFE] p-6 rounded-lg shadow flex items-center justify-between">
-      <div>
-        <h2 class="text-xl font-semibold mb-2">Weekly Exams!</h2>
-        <section class="p-6 bg-white rounded-lg shadow">
-          <div class="flex justify-between items-center mb-4">
-            <h2 class="text-2xl font-bold text-gray-800">Exam Schedule</h2>
+    <main class="flex-1 p-6 space-y-6">
+      <h1 class="text-2xl font-bold text-gray-800">Admin Dashboard</h1>
+
+
+      <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="bg-white p-4 rounded-lg shadow text-center" style="background-color: #e2ebfe;">
+          <p>Total Students</p>
+          <strong class="text-xl">350</strong>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow text-center" style="background-color: #e2ebfe;">
+          <p>Total Teachers</p>
+          <strong class="text-xl">40</strong>
+        </div>
+
+        <div class="bg-white p-4 rounded-lg shadow text-center" style="background-color: #e2ebfe;">
+          <p>Total Exams</p>
+          <strong class="text-xl">40</strong>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow text-center" style="background-color: #e2ebfe;">
+          <p>Pending Exams</p>
+          <strong class="text-xl">15</strong>
+        </div>
+
+      </section>
+
+
+      <section class="bg-white p-6 rounded-lg shadow" style="background-color: #e2ebfe;">
+        <h2 class="text-xl font-semibold mb-4">User Management</h2>
+        <div class="overflow-x-auto">
+          <table class="w-full text-sm text-left text-gray-500">
+            <thead class="text-xs text-gray-700 uppercase bg-gray-50">
+              <tr style="background-color: #88b3ff;">
+                <th class="px-4 py-2">User ID</th>
+                <th class="px-4 py-2">Name</th>
+                <th class="px-4 py-2">Email</th>
+                <th class="px-4 py-2">Role</th>
+                <th class="px-4 py-2">Status</th>
+                <th class="px-4 py-2">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="bg-white border-b">
+                <td class="px-4 py-2">101</td>
+                <td class="px-4 py-2">John Smith</td>
+                <td class="px-4 py-2">john.smithexample.com</td>
+                <td class="px-4 py-2">Admin</td>
+                <td class="px-4 py-2">
+                  <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded">Active</span>
+                </td>
+                <td class=" py-1">
+                  <button type="button"
+                    class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 shadow-lg shadow-blue-500/50 dark:shadow-lg dark:shadow-blue-800/80 font-medium rounded-lg text-sm px-3 py-1.5 text-center me-2 mb-2 ">Edit</button>
+                  <button type="button"
+                    class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-3 py-1.5 text-center me-2 mb-2">Delete</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+
+      <section class="bg-white p-6 rounded-lg shadow" style="background-color: #e2ebfe;">
+        <h2 class="text-xl font-semibold mb-4">Recent Activity</h2>
+        <div class="space-y-4">
+          <div class="flex items-center justify-between">
+            <p class="text-gray-700">User John Smith updated permissions for user 102</p>
+            <span class="text-gray-500 text-sm">2025-04-05 12:45 PM</span>
+          </div>
+          <div class="flex items-center justify-between">
+            <p class="text-gray-700">User 103 requested a role change</p>
+            <span class="text-gray-500 text-sm">2025-04-05 11:20 AM</span>
           </div>
 
-          <!-- Exam Table -->
-          <div class="overflow-x-auto">
-            <table class="w-full text-sm text-left text-gray-600">
-              <thead class="text-xs text-gray-700 uppercase bg-[#AC94FA]">
-                <tr>
-                  <th class="px-4 py-3">Exam Title</th>
-                  <th class="px-4 py-3">Subject</th>
-                  <th class="px-4 py-3">Date</th>
-                  <th class="px-4 py-3">Time</th>
-                  <th class="px-4 py-3">Duration</th>
-                  <th class="px-4 py-3">Status</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr class="bg-white border-b">
-                  <td class="px-4 py-3 font-medium text-gray-900">Mid Term Exam</td>
-                  <td class="px-4 py-3">Mathematics</td>
-                  <td class="px-4 py-3">2025-04-15</td>
-                  <td class="px-4 py-3">10:00 AM</td>
-                  <td class="px-4 py-3">2 Hours</td>
-                  <td class="px-4 py-3">
-                    <span class="bg-green-100 text-green-800 text-xs font-medium px-2 py-1 rounded">Scheduled</span>
-                  </td>
-                </tr>
-                <!-- Repeat rows -->
-              </tbody>
-            </table>
-          </div>
-        </section>
-      </div>
-    </section>
+        </div>
+      </section>
 
-    <!-- Activity Summary -->
-    <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
-      <div class="bg-[#EDEBFE] p-4 rounded-lg shadow text-center">
-        <p>Presence</p>
-        <strong class="text-xl">120</strong>
-      </div>
-      <div class="bg-[#EDEBFE] p-4 rounded-lg shadow text-center">
-        <p>Quizzes</p>
-        <strong class="text-xl">20</strong>
-      </div>
-      <div class="bg-[#EDEBFE] p-4 rounded-lg shadow text-center">
-        <p>Exam</p>
-        <strong class="text-xl">10</strong>
-      </div>
-      <div class="bg-[#EDEBFE] p-4 rounded-lg shadow text-center">
-        <p>Finish This Week</p>
-        <strong class="text-xl">5</strong>
-      </div>
-    </section>
+    </main>
 
-    <!-- Teacher's Class Summary -->
-    <section class="bg-[#EDEBFE] p-6 rounded-lg shadow">
-      <h2 class="text-xl font-semibold mb-4">My Classes</h2>
-      <div class="overflow-x-auto">
-        <table class="w-full text-sm text-left text-gray-500">
-          <thead class="text-xs text-gray-700 uppercase bg-[#AC94FA]">
-            <tr>
-              <th class="px-4 py-2">Class</th>
-              <th class="px-4 py-2">Subject</th>
-              <th class="px-4 py-2">Students</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="bg-white border-b">
-              <td class="px-4 py-2">10A</td>
-              <td class="px-4 py-2">Mathematics</td>
-              <td class="px-4 py-2">35</td>
-            </tr>
-            <tr class="bg-white border-b">
-              <td class="px-4 py-2">10B</td>
-              <td class="px-4 py-2">Science</td>
-              <td class="px-4 py-2">30</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-  </main>
+
+  </div>
 
   <!-- Right Panel -->
-  <!-- <app-left-details-bar></app-left-details-bar> -->
+  <app-details-bar></app-details-bar>
 
 </div>
